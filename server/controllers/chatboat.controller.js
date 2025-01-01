@@ -10,7 +10,7 @@ export const chatboat = async(req, res) => {
     conversationHistory.push({ role: "user", content: userMessage });
 
     try {
-        const genAI = new GoogleGenerativeAI('AIzaSyDMk6YKk2nzM90gfg6QCqwTQHnicgv9TDk');
+        const genAI = new GoogleGenerativeAI('AIzaSyA4Z1qN06drzkxl4Occ1ftZ6kdsYNXD-2U');
         const model = genAI.getGenerativeModel({
             model: "gemini-pro",
         });
@@ -39,4 +39,4 @@ export const chatboat = async(req, res) => {
 
 function formatResponse(response) {
     return response.replace(/\*(.*?)\*/g, '$1');
-}
+}                        
